@@ -70,7 +70,7 @@
 			}
 			else
 			{
-				$sql="SELECT password FROM account WHERE password='$password'";
+				$sql="SELECT password FROM account WHERE (userName='$userName') and (password='$password')";
 				$result=mysqli_query($conn,$sql);
 				$test=mysqli_fetch_assoc($result);
 				if($test==false)
